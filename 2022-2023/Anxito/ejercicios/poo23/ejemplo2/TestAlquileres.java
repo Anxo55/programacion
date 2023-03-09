@@ -44,14 +44,16 @@ public class TestAlquileres {
                 if(miNuevoTurismo instanceof Turismo)
                     System.out.println("turismo: "+miNuevoTurismo);
 
-                //ERROR GRAVE    
-                Deportivo miNuevoDeportivo = (Deportivo) miVehiculo;
-                if(miNuevoDeportivo instanceof Deportivo)
-                    System.out.println("deportivo: "+miNuevoDeportivo);
+                //ERROR GRAVE  
+
+                //Deportivo miNuevoDeportivo = (Deportivo) miVehiculo;
+                //if(miNuevoDeportivo instanceof Deportivo)
+                    //System.out.println("deportivo: "+miNuevoDeportivo);
+
                 //ERROR GRAVE
-                Furgoneta miNuevaFurgoneta = (Furgoneta) miVehiculo;
-                if(miNuevaFurgoneta instanceof Furgoneta)
-                    System.out.println("furgoneta: "+miNuevaFurgoneta);
+                //Furgoneta miNuevaFurgoneta = (Furgoneta) miVehiculo;
+                //if(miNuevaFurgoneta instanceof Furgoneta)
+                    //System.out.println("furgoneta: "+miNuevaFurgoneta);
 
 
     }
