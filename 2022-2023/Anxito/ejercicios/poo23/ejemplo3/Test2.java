@@ -2,7 +2,7 @@ package poo23.ejemplo3;
 
 import java.util.ArrayList;
 
-public class TestSeleccion {
+public class Test2 {
 
     //ArrayList de objetos SeleccionFutbol. Independientemente de la clase hija a la que perteneza el objeto
     public static ArrayList<SeleccionFutbol> integrantes = new ArrayList<SeleccionFutbol>();
@@ -18,7 +18,7 @@ public class TestSeleccion {
         integrantes.add(raulMartinez);
 
         //CONCENTRACION
-        System.out.println("Todos los integrantes comienzan una concentracion. (Todos ejecutan el mismo método)");
+        System.out.println("Todos los integrantes comienzan una concentracion. (NO ejecutan el mismo método)");
         for(SeleccionFutbol integrante : integrantes) {
             System.out.println(integrante.toString()+" -> ");
             integrante.Concentrarse();
@@ -30,7 +30,7 @@ public class TestSeleccion {
             integrante.Viajar();
         }
 
-        //ENTRENAMIENTO
+        /*ENTRENAMIENTO
         System.out.println("\nEntrenaiento: Solamente el entrenador y el futbolista tienen metodos para entrenar:");
         System.out.println(delBosque.toString()+" -> ");
         delBosque.dirigirEntrenamiento();
@@ -48,7 +48,7 @@ public class TestSeleccion {
         delBosque.dirigirPartido();
         System.out.println(iniesta.toString()+" -> ");
         iniesta.jugarPartido();
-
+*/
     }
     
 }

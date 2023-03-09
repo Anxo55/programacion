@@ -20,6 +20,20 @@ public class Entrenador extends SeleccionFutbol {
 	public void setIdFederacion(String idFederacion) {
 		this.idFederacion = idFederacion;
 	}
+    
+    @Override
+    public void Concentrarse() {
+        //TODO Auto-generathed method stub
+        super.Concentrarse();
+        System.out.println("El entrenador tiene una habitacion doble");
+    }
+
+    @Override
+    public void Viajar() {
+        //TODO Auto-generathed method stub
+        super.Viajar();
+        System.out.println("Viaja en avion en primera clase");
+    }
 
 	public void dirigirPartido() {
 		System.out.println("Dirige un partido");

@@ -31,6 +31,13 @@ public class Masajista extends SeleccionFutbol {
 		this.aniosExperiencia = aniosExperiencia;
 	}
 
+    @Override
+    public void Viajar() {
+        //TODO Auto-generathed method stub
+        super.Viajar();
+        System.out.println("El masajista va andando");
+    }
+
 	public void darMasaje() {
 		System.out.println("Da un masaje");
 	}

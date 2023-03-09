@@ -31,6 +31,13 @@ public class Futbolista extends SeleccionFutbol {
 		this.demarcacion = demarcacion;
 	}
 
+    @Override
+    public void Concentrarse() {
+        // TODO Auto-generated method stub
+        super.Concentrarse();
+        System.out.println("se concentra con un compañero");
+    }
+
 	public void jugarPartido() {
 		System.out.println("Juega un partido");
 	}
