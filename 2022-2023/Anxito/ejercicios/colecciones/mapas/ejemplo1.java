@@ -1,6 +1,7 @@
 package colecciones.mapas;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class ejemplo1 {
     
@@ -18,6 +19,11 @@ public class ejemplo1 {
 		m.put(605, "Esteban Quito ");
 		
 		System.out.println("Los elementos de m son: \n" + m);
+
+		for(Map.Entry pareja: m.entrySet()){
+			System.out.println("Esta es la clave "+pareja.getKey());
+			System.out.println("ESte es su valor "+pareja.getValue());
+		}
 	}
 
 }
