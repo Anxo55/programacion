@@ -14,4 +14,12 @@ public class HasMap<T1, T2> {
     public void remove(int num) {
     }
 
+    public boolean containsKey(int claveM) {
+        return false;
+    }
+
+    public String get(int claveM) {
+        return null;
+    }
+
 }
