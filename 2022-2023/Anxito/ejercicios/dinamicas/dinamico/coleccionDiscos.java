@@ -25,8 +25,6 @@ public class coleccionDiscos {
         } while (!((discos[i].getCodigo()).equals(code)) && i<discos.length );
 
 		return code;
-
-		return "Codigo no encontrado";
 	}
 
 
