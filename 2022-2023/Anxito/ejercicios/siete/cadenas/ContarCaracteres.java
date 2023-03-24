@@ -17,7 +17,7 @@ public class ContarCaracteres {
 
         int veces = 0;
 
-        if(texto.indexOf(charBusca)==1)
+        if(texto.indexOf(charBusca)==1) 
             System.out.println("no se ha encontrad el caracter "+charBusca);
         else{
 

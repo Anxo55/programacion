@@ -1,3 +1,5 @@
+package colecciones.mapas;
+
 import java.util.ArrayList;
 
 public class Ejercicio7 {
