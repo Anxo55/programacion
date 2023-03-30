@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 package colecciones.mapas;
-
-public class Ejercicio12 {
-
-        
-    
-=======
- package colecciones.mapas;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,8 +14,6 @@ import java.util.HashMap;
  * 
  * 
  * */
-
-
 
 public class Ejercicio12 {
 	static HashMap<String,Integer> puntaje = new HashMap<String,Integer>();
@@ -66,5 +56,5 @@ public class Ejercicio12 {
 		System.out.println("PUNTAJE TOTAL: "+total+" PUNTOS");
 		
 	}	
->>>>>>> ef5ad571512a01f97bc903cb7e93713be39c3613
+
 }

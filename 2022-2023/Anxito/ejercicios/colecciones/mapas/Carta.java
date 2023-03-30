@@ -58,9 +58,6 @@ public class Carta implements Comparable {
 		return Objects.equals(palo, other.palo) && Objects.equals(valor, other.valor);
 	}
 
-
-	
-	
 	//también podemos hacer el equals a mano:
 	
 	

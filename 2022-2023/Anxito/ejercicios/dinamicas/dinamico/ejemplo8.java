@@ -10,11 +10,11 @@ public class ejemplo8 {
         Scanner sc = new Scanner(System.in);
 
         ArrayList<Gato> banda = new ArrayList<Gato>(); 
-        Gato dos = new Gato("pepe", "miguel","maria" );
-        banda.add(new Gato("Garfield", "naranja", "mestizo")); 
+        Gato dos = new Gato("pepe", "miguel","maria", 0 );
+        banda.add(dos); 
         banda.add((dos)); 
-        banda.add(new Gato("Mauri", "blanco", "manx")); 
-        banda.add(new Gato("Ulises", "marrón", "persa")); 
+        banda.add(dos); 
+        banda.add(dos); 
         banda.add(2,new Gato() ); 
         System.out.println("\nDatos de los gatos ordenados por nombre:"); 
         for (Gato g: banda) { 
