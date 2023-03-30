@@ -1,11 +1,13 @@
 public class Logistica {
     
+    private String Nombre;
     private byte Capacidad;
      private byte NumeroDeHuecos;
     
-     Logistica(byte Capacidad) {
+     Logistica(byte Capacidad, String n) {
      this.Capacidad = Capacidad;
      NumeroDeHuecos = Capacidad;
+     this.Nombre=n;
      }
     
      public byte DimeNumeroDeHuecos() {
@@ -25,11 +27,19 @@ public class Logistica {
      }
     
      public void MeteContenedor() {
+        System.out.println(this.toString());
      NumeroDeHuecos--;
      }
     
      public void SacaContenedor() {
      NumeroDeHuecos++;
      }
+
+    @Override
+    public String toString() {
+        return "Logistica [Capacidad=" + Capacidad + ", NumeroDeHuecos=" + NumeroDeHuecos + "]";
+    }
+
+     
     
      } // LogisticaAlmacen

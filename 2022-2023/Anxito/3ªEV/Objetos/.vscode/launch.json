@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "testLogistica",
+            "request": "launch",
+            "mainClass": "testLogistica",
+            "projectName": "Objetos_5bd015e2"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
