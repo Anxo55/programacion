@@ -1,4 +1,4 @@
-package TercerTrimestre;
+package Objetos;
 
 public class Objeto3DConConstructor {
     public class Objeto3D {
