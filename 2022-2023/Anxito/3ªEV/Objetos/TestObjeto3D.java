@@ -1,5 +1,3 @@
-package TercerTrimestre;
-
 public class TestObjeto3D {
     public static void main (String[] args) {
         Objeto3D Caja = new Objeto3D();

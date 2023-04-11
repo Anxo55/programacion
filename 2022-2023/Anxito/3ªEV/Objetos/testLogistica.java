@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class testLogistica {
     
     public static void main(String[] args){
-        Logistica Almacen1 = new Logistica((byte)2);
-        Logistica Almacen2 = new Logistica((byte)4);
-        Logistica Almacen3 = new Logistica((byte)8);
+        Logistica Almacen1 = new Logistica((byte)2, null);
+        Logistica Almacen2 = new Logistica((byte)4, null);
+        Logistica Almacen3 = new Logistica((byte)8, null);
         
          String Accion;
          Scanner sc = new Scanner(System.in);

@@ -1,5 +1,3 @@
-package TercerTrimestre;
-
 public class TestObjetoConstructores {
     public static void main(String[] args) {
         Objeto3DConConstructor Caja = new

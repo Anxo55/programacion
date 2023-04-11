@@ -1,5 +1,3 @@
-package TercerTrimestre;
-
 public class TestSemaforo {
     public static void main (String[] args) {
         Semaforo MiSemaforo = new Semaforo();
