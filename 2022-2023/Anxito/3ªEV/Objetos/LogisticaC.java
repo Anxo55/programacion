@@ -1,18 +1,19 @@
-public class Logistica {
+public class LogisticaC {
     
     private String Nombre;
     private byte Capacidad;
-    private byte NumeroDeHuecos;
+    //private byte NumeroDeHuecos;
+    private byte NumeroDeContenedores;
     
-     Logistica(byte Capacidad, String n) {
+     LogisticaC(byte Capacidad, String n) {
         
      this.Capacidad = Capacidad;
-     NumeroDeHuecos = Capacidad;
+     NumeroDeContenedores = 0; //logica inversa
      this.Nombre=n;
      }
     
-     public byte DimeNumeroDeHuecos() {
-     return (NumeroDeHuecos);
+     public byte DimeNumeroDeContenedores() {
+     return (NumeroDeContenedores);
      }
     
      public byte DimeCapacidad() {
@@ -20,27 +21,29 @@ public class Logistica {
      }
     
      public boolean HayHueco() {
-     return (NumeroDeHuecos != 0);
+     return (NumeroDeContenedores != Capacidad);
      }
     
      public boolean HayContenedor() {
-     return (NumeroDeHuecos != Capacidad);
+     return (NumeroDeContenedores != 0);
      }
     
      public void MeteContenedor() {
         System.out.println(this.toString());
-     NumeroDeHuecos--;
+     NumeroDeContenedores++;
      }
     
      public void SacaContenedor() {
-     NumeroDeHuecos++;
+     NumeroDeContenedores--;
      }
 
     @Override
     public String toString() {
-        return "Logistica [Capacidad=" + Capacidad + ", NumeroDeHuecos=" + NumeroDeHuecos + "]";
+        return "Logistica [Capacidad=" + Capacidad + ", NumeroDeContenedores=" + NumeroDeContenedores + "]";
     }
 
      
     
      } // LogisticaAlmacen
+
+

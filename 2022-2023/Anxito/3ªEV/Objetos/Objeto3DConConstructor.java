@@ -1,5 +1,3 @@
-package Objetos;
-
 public class Objeto3DConConstructor {
     public class Objeto3D {
         private double X = 0d;

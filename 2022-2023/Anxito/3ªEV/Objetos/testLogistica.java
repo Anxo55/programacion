@@ -34,7 +34,8 @@ public class testLogistica {
          if (Almacen3.HayContenedor())
          Almacen3.SacaContenedor();
          else
-         System.out.println("Hay que esperar a que vengan a poner un contenedor");
+            System.out.println("Hay que esperar a que vengan a poner un contenedor");
+            
          } while (!Accion.equals("Salir"));
          }
          } // clase
