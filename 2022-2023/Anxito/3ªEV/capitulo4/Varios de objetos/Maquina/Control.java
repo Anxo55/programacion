@@ -47,14 +47,15 @@ Scanner sc = new Scanner(System.in);
 //TERCER CASO
  case 'a':
  System.out.println("Operación anulada");
+
  Anulado = true;
  break;
  }
 
  Maquina.MostrarEstadoMaquina();
 
- } while (Acumulado < Precio || Anulado);
-
+ } while (Acumulado < Precio && !Anulado);
+ //condicion logica????? ahora si
  if (Anulado)
  Devolver(Maquina,Acumulado);
  else

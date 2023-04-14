@@ -68,6 +68,7 @@ public class testMaquina {
 
          case 's':
          System.out.println("fin de la simulacion");
+         break;
          
         
          default:
