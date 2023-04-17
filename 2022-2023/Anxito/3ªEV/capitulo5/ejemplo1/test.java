@@ -1,7 +1,5 @@
 package capitulo5.ejemplo1;
 
-import capitulo5.Libro;
-
 public class test {
 
     public static void main(String[] args) {

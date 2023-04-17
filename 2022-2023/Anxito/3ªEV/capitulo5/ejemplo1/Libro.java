@@ -1,4 +1,4 @@
-package capitulo5;
+package capitulo5.ejemplo1;
 
 public class Libro extends Publicacion {
 
