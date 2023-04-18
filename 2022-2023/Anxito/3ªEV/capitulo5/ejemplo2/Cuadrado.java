@@ -38,6 +38,19 @@ public class Cuadrado extends Figura{
         return Lado*Lado;
     }
 
+    //posible problema
+    @Override
+    public int compareTo(Object arg0) {
+        // TODO Auto-generated method stub
+        Figura c = (Figura) arg0;
+        if (this.calculaArea()>c.calculaArea())
+            return 1;
+        else if (this.calculaArea() == c.calculaArea())
+            return 0;
+        else
+            return -1;
+    }
+
      
     
 }

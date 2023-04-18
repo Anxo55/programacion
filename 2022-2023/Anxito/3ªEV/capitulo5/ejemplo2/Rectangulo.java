@@ -40,6 +40,19 @@ public class Rectangulo extends Figura {
         return Lados[0]*Lados[1];
      }
 
+   //posible problema
+   @Override
+   public int compareTo(Object arg0) {
+       // TODO Auto-generated method stub
+       Figura r = (Figura) arg0;
+       if (this.calculaArea()>r.calculaArea())
+           return 1;
+       else if (this.calculaArea() == r.calculaArea())
+           return 0;
+       else
+           return -1;
+   }
+
     
 
      }

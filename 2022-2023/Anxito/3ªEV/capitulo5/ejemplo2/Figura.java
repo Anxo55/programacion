@@ -3,7 +3,9 @@ package capitulo5.ejemplo2;
 import java.awt.Color;
 import java.util.Arrays;
 
-abstract public class Figura {
+//EJERCICIO MUY INTERESANTE PARA QUE CAIGA EN EL EXAMEN
+
+abstract public class Figura implements Comparable{
     
     protected Color ColorFigura;
      protected int[] Posicion = new int[2];
