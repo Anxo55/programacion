@@ -47,6 +47,10 @@ public class Camion extends Vehiculo {
         return "Camion [NumeroDeEjes=" + NumeroDeEjes + "]";
     }
 
-     
+    @Override
+    public double pagarRodaje() {
+        // TODO Auto-generated method stub
+        return super.pagarRodaje() +2.17*getCilindrada();
+    }     
     
-     }
+}

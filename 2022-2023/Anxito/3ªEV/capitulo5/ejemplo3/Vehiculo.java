@@ -36,8 +36,6 @@ public class Vehiculo {
      short Potencia) {
      this(color,NumRuedas,Cilindrada);
      this.Potencia = Potencia;
-   
-    
      }
     
      public void setColor(Color color) {
@@ -65,7 +63,11 @@ public class Vehiculo {
         return "Vehiculo [ColorVehiculo=" + ColorVehiculo + ", NumRuedas=" + NumRuedas + ", Cilindrada=" + Cilindrada
                 + ", Potencia=" + Potencia + "]";
     }
+
+    public double pagarRodaje(){
+        return 53.27d;
+    }
    
-     }
+}
 
 
