@@ -39,7 +39,7 @@ return "Coche [numeroDePuertas=" + numeroDePuertas + "]";
 @Override
 public double pagarRodaje() {
     // TODO Auto-generated method stub
-    return super.pagarRodaje();
+    return super.pagarRodaje() + 40*getNumeroPuertas;
 }
   
 }
