@@ -1,45 +1,59 @@
-package capitulo5.ejemplo3;
+package  capitulo5.ejemplo3;
 
 import java.awt.Color;
 
-public class Coche extends Vehiculo{
+public class Coche extends Vehiculo {
 
-    //atributos
-    int numeroDePuertas;
+    private int NumeroPuertas;
 
-public Coche(byte NumRuedas) {
-super(NumRuedas);
-}
+    public Coche(Color color, int numeroPuertas) {
+        super(color);
+        NumeroPuertas = numeroPuertas;
+    }
 
-public Coche(Color color, byte NumRuedas, short Cilindrada, short Potencia) {
-super(color, NumRuedas, Cilindrada, Potencia);
-}
+    public Coche(byte NumRuedas, int numeroPuertas) {
+        super(NumRuedas);
+        NumeroPuertas = numeroPuertas;
+    }
 
-public Coche(Color color, byte NumRuedas, short Cilindrada) {
-super(color, NumRuedas, Cilindrada);
-}
+    public Coche(short Cilindrada, int numeroPuertas) {
+        super(Cilindrada);
+        NumeroPuertas = numeroPuertas;
+    }
 
-public Coche(Color color, byte NumRuedas) {
-super(color, NumRuedas);
-}
+    public Coche(Color color, byte NumRuedas, int numeroPuertas) {
+        super(color, NumRuedas);
+        NumeroPuertas = numeroPuertas;
+    }
 
-public Coche(Color color) {
-super(color);
-}
+    public Coche(Color color, byte NumRuedas, short Cilindrada, int numeroPuertas) {
+        super(color, NumRuedas, Cilindrada);
+        NumeroPuertas = numeroPuertas;
+    }
 
-public Coche(short Cilindrada) {
-super(Cilindrada);
-}
+    public Coche(Color color, byte NumRuedas, short Cilindrada, short Potencia, int numeroPuertas) {
+        super(color, NumRuedas, Cilindrada, Potencia);
+        NumeroPuertas = numeroPuertas;
+    }
 
-@Override
-public String toString() {
-return "Coche [numeroDePuertas=" + numeroDePuertas + "]";
-}
+    public int getNumeroPuertas() {
+        return NumeroPuertas;
+    }
 
-@Override
-public double pagarRodaje() {
-    // TODO Auto-generated method stub
-    return super.pagarRodaje() + 40*getNumeroPuertas;
-}
-  
+    public void setNumeroPuertas(int numeroPuertas) {
+        NumeroPuertas = numeroPuertas;
+    }
+
+    public double pagarRodaje() {
+        return super.pagarRodaje() + 40 * getNumeroPuertas() + 0.18 * getPotencia();
+    }
+
+    @Override
+    public String toString() {
+        return "Coche [NumeroPuertas=" + NumeroPuertas + "ColorVehiculo=" + ColorVehiculo + ", NumRuedas=" + NumRuedas
+                + ", Cilindrada=" + Cilindrada
+                + ", Potencia=" + Potencia + "]";
+
+    }
+
 }

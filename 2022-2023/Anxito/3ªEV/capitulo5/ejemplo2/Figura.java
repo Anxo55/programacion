@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 //EJERCICIO MUY INTERESANTE PARA QUE CAIGA EN EL EXAMEN
 
-abstract public class Figura implements Comparable{
+abstract public class Figura implements Comparable, Perimetrosa{
     
     protected Color ColorFigura;
      protected int[] Posicion = new int[2];
@@ -48,6 +48,11 @@ abstract public class Figura implements Comparable{
     }
     
      abstract public double calculaArea();
+
+     public double Perimetro() {
+        System.out.println("Esto es un metodo de figura");
+        return 0d;
+     }
         
      
 

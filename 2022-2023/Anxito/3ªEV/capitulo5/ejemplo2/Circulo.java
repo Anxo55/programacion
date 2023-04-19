@@ -55,6 +55,11 @@ public class Circulo extends Figura {
             return -1;
     }
 
-     
+    @Override
+    public double perimetro() {
+        // TODO Auto-generated method stub
+        super.Perimetro();
+        return 2*Math.PI*getRadio();
+    }     
 
 }

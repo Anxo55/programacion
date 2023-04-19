@@ -67,6 +67,11 @@ public class Triangulo extends Figura {
             return -1;
     }
 
-
+    @Override
+    public double perimetro() {
+        // TODO Auto-generated method stub
+        System.out.println("No se calcular el perimetro lo siento");
+        return 0;
+    }
     
 }
