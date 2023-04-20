@@ -1,5 +1,4 @@
-package  capitulo5.ejemplo3;
-
+package Capitulo5.Ejemplo3;
 import java.awt.Color;
 
 public class Coche extends Vehiculo {
@@ -46,6 +45,15 @@ public class Coche extends Vehiculo {
 
     public double pagarRodaje() {
         return super.pagarRodaje() + 40 * getNumeroPuertas() + 0.18 * getPotencia();
+    }
+
+    @Override
+    public double pagarCarburante() {
+        // TODO Auto-generated method stub
+        if(esDiesel())
+        return super.pagarCarburante()+GASOIL*pideLitros();
+        else
+        return super.pagarCarburante()+GASOLINA*pideLitros();
     }
 
     @Override
