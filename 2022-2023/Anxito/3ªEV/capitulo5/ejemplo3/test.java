@@ -1,9 +1,9 @@
-package Capitulo5.Ejemplo3;
+package capitulo5.ejemplo3;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Test {
+public class test {
     public static void main(String[] args) {
         Vehiculo vehiculo = new Vehiculo(Color.yellow, (byte) 4, (short) 2500, (byte) 300);
 

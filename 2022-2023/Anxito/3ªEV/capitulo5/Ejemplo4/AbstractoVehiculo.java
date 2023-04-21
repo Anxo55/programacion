@@ -1,4 +1,4 @@
-package Capitulo5.Ejemplo4;
+package capitulo5.ejemplo4;
 import java.awt.Color;
 public abstract class AbstractoVehiculo {
     // Los mismos constructores y metodos que en la clase

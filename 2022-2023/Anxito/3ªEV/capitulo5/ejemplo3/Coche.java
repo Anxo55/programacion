@@ -1,4 +1,4 @@
-package Capitulo5.Ejemplo3;
+package capitulo5.ejemplo3;
 import java.awt.Color;
 
 public class Coche extends Vehiculo {
