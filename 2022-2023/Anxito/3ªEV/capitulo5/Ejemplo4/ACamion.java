@@ -9,7 +9,7 @@ public class ACamion extends AbstractoVehiculo {
 // Tambien cambiamos el nombre de los constructores
 
 public float Impuesto(){
-return (super.DimeCilindrada()/30 + super.DimePotencia()*20 + super.DimeNumRuedas()*20 + DimeNumeroDeEjes()*50);
+return (super.DimeCilindrada()/30 + super.DimePotencia()*20 + super.DimeNumRuedas()*20 + DimeNumRuedas()*50);
 }
 
 }

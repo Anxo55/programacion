@@ -9,7 +9,6 @@ public class AMotocicleta extends AbstractoVehiculo {
 // Tambien cambiamos el nombre de los constructores
 
 public float Impuesto(){
-return (super.DimeCilindrada()/30 +
-super.DimePotencia()*30);
+return (super.DimeCilindrada()/30 + super.DimePotencia()*30);
 }
 }
