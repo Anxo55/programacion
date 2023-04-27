@@ -2,7 +2,7 @@ package capitulo5.ejemplo42;
 
 public class Rural extends Casa{
 
-    protected double valorArea;
+    protected static double valorArea=150000;
     protected int distanciaCabera;
     protected int altitud;
 
