@@ -1,28 +1,29 @@
 package capitulo5.ejemplo42;
 
 public class ConjuntoCerrado extends Urbana{
-
-    protected double valorArea;
+   // protected static double valorArea=2500000;
     protected double valorAdministracion;
     protected double tienePiscina;
     protected boolean tieneCamposDeportivos;
-    
-    public ConjuntoCerrado(int idTipo, int area, String direccion, int numeroHabitaciones, int numeroBaños,
-            int numeroPisos, double valorArea, double valorAdministracion, double tienePiscina,
-            boolean tieneCamposDeportivos) {
-        super(idTipo, area, direccion, numeroHabitaciones, numeroBaños, numeroPisos);
-        this.valorArea = valorArea;
+
+
+    public ConjuntoCerrado(int idTipo, int area, String direccion, int numHabitaciones, int numBaños, int numPisos,
+            double valorAdministracion, double tienePiscina, boolean tieneCamposDeportivos) {
+        super(idTipo, area, direccion, numHabitaciones, numBaños, numPisos);
         this.valorAdministracion = valorAdministracion;
         this.tienePiscina = tienePiscina;
         this.tieneCamposDeportivos = tieneCamposDeportivos;
+        setValorArea(2500);
     }
+
 
     @Override
     public String toString() {
-        return "ConjuntoCerrado [valorArea=" + valorArea + ", valorAdministracion=" + valorAdministracion
+        return super.toString()+ "ConjuntoCerrado [valorArea=" + valorArea + ", valorAdministracion=" + valorAdministracion
                 + ", tienePiscina=" + tienePiscina + ", tieneCamposDeportivos=" + tieneCamposDeportivos + "]";
     }
 
     
+
     
 }

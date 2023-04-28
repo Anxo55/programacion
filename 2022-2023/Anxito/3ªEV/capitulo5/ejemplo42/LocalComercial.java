@@ -1,19 +1,19 @@
 package capitulo5.ejemplo42;
 
 public class LocalComercial extends Local{
-
-    protected double valorArea;
-    protected String CentroComercial;
-    public LocalComercial(int idTipo, int area, String direccion, double valorArea, String centroComercial) {
-        super(idTipo, area, direccion);
-        this.valorArea = valorArea;
-        CentroComercial = centroComercial;
+    protected static double valorArea=3000000;
+    protected String centroComercial;
+    
+    public LocalComercial(int idTipo, int area, String direccion, tipo tipoLocal, String centroComercial) {
+        super(idTipo, area, direccion, tipoLocal);
+        this.centroComercial = centroComercial;
+        setValorArea(3000);
     }
+
     @Override
     public String toString() {
-        return "LocalComercial [valorArea=" + valorArea + ", CentroComercial=" + CentroComercial + "]";
+        return super.toString()+ "LocalComercial [valorArea=" + valorArea + ", centroComercial=" + centroComercial + "]";
     }
 
-    
     
 }

@@ -2,19 +2,19 @@ package capitulo5.ejemplo42;
 
 public class Independiente extends Urbana{
 
-    protected double valorArea;
+    protected static double valorArea=3000000;
 
-    public Independiente(int idTipo, int area, String direccion, int numeroHabitaciones, int numeroBaños,
-            int numeroPisos, double valorArea) {
-        super(idTipo, area, direccion, numeroHabitaciones, numeroBaños, numeroPisos);
-        this.valorArea = valorArea;
+    public Independiente(int idTipo, int area, String direccion, int numHabitaciones, int numBaños, int numPisos
+           ) {
+        super(idTipo, area, direccion, numHabitaciones, numBaños, numPisos);
+       
     }
 
     @Override
     public String toString() {
-        return "Independiente [valorArea=" + valorArea + "]";
+        return super.toString()+ "Independiente [valorArea=" + valorArea + "]";
     }
 
-    
+
     
 }

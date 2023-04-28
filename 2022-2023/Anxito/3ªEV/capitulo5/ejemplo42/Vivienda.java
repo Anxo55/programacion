@@ -1,20 +1,22 @@
 package capitulo5.ejemplo42;
 
-public class Vivienda  extends Inmueble{
+public class Vivienda extends Inmueble{
 
-    protected int numeroHabitaciones;
-    protected int numeroBaños;
+    protected int numHabitaciones;
+    protected int numBaños;
     
-    public Vivienda(int idTipo, int area, String direccion, int numeroHabitaciones, int numeroBaños) {
+    public Vivienda(int idTipo, int area, String direccion, int numHabitaciones, int numBaños) {
         super(idTipo, area, direccion);
-        this.numeroHabitaciones = numeroHabitaciones;
-        this.numeroBaños = numeroBaños;
+        this.numHabitaciones = numHabitaciones;
+        this.numBaños = numBaños;
     }
 
     @Override
     public String toString() {
-        return "Vivienda [numeroHabitaciones=" + numeroHabitaciones + ", numeroBaños=" + numeroBaños + "]";
+        return super.toString()+ "Vivienda [numHabitaciones=" + numHabitaciones + ", numBaños=" + numBaños + "]";
     }
+
+    
 
     
     

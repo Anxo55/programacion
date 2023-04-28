@@ -1,19 +1,17 @@
 package capitulo5.ejemplo42;
 
 public class Estudio extends Apartamento{
+    protected static double valorArea=1500000;
 
-    protected double valorArea;
-
-    public Estudio(int idTipo, int area, String direccion, int numeroHabitaciones, int numeroBaños, double valorArea) {
-        super(idTipo, area, direccion, numeroHabitaciones, numeroBaños);
-        this.valorArea = valorArea;
+    public Estudio(int idTipo, int area, String direccion, int numHabitaciones, int numBaños) {
+        super(idTipo, area, direccion, 1,2);
+        
     }
 
     @Override
     public String toString() {
-        return "Estudio [valorArea=" + valorArea + "]";
+        return super.toString()+ "Estudio []";
     }
 
-    
     
 }

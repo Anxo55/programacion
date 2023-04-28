@@ -1,4 +1,4 @@
-package Capitulo5.Ejemplo41;
+package capitulo5.ejemplo41;
 
 import java.util.Scanner;
 
@@ -19,4 +19,5 @@ public class Test {
         float cantidadDepositar
     
     
+}
 }

@@ -1,22 +1,21 @@
 package capitulo5.ejemplo42;
 
 public class Familiar extends Apartamento{
-
-    protected double valorArea;
+    protected static double valorArea=2000000;
     protected int valorAdministracion;
-    
-    public Familiar(int idTipo, int area, String direccion, int numeroHabitaciones, int numeroBaños, double valorArea,
+
+
+    public Familiar(int idTipo, int area, String direccion, int numHabitaciones, int numBaños, 
             int valorAdministracion) {
-        super(idTipo, area, direccion, numeroHabitaciones, numeroBaños);
-        this.valorArea = valorArea;
+        super(idTipo, area, direccion, numHabitaciones, numBaños);
         this.valorAdministracion = valorAdministracion;
     }
 
+
     @Override
     public String toString() {
-        return "Familiar [valorArea=" + valorArea + ", valorAdministracion=" + valorAdministracion + "]";
+        return super.toString()+"Familiar [valorArea=" + valorArea + ", valorAdministracion=" + valorAdministracion + "]";
     }
 
-    
     
 }

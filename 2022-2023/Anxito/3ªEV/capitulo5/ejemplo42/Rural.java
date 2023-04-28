@@ -1,24 +1,25 @@
 package capitulo5.ejemplo42;
 
-public class Rural extends Casa{
 
-    protected static double valorArea=150000;
-    protected int distanciaCabera;
+
+public class Rural extends Casa{
+    protected static double valorArea=1500000;
+    protected int distanciaCarrera;
     protected int altitud;
 
-    public Rural(int idTipo, int area, String direccion, int numeroHabitaciones, int numeroBaños, int numeroPisos,
-            double valorArea, int distanciaCabera, int altitud) {
-        super(idTipo, area, direccion, numeroHabitaciones, numeroBaños, numeroPisos);
-        this.valorArea = valorArea;
-        this.distanciaCabera = distanciaCabera;
+    public Rural(int idTipo, int area, String direccion, int numHabitaciones, int numBaños, int numPisos,
+             int distanciaCarrera, int altitud) {
+        super(idTipo, area, direccion, numHabitaciones, numBaños, numPisos);
+        this.distanciaCarrera = distanciaCarrera;
         this.altitud = altitud;
     }
 
     @Override
     public String toString() {
-        return "Rural [valorArea=" + valorArea + ", distanciaCabera=" + distanciaCabera + ", altitud=" + altitud + "]";
+        return super.toString()+ "Rural [valorArea=" + valorArea + ", distanciaCarrera=" + distanciaCarrera + ", altitud=" + altitud
+                + "]";
     }
 
     
-    
+
 }
