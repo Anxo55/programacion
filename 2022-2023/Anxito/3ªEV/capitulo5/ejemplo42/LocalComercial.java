@@ -1,7 +1,7 @@
 package capitulo5.ejemplo42;
 
 public class LocalComercial extends Local{
-    protected static double valorArea=3000000;
+    //protected static double valorArea=3000000;
     protected String centroComercial;
     
     public LocalComercial(int idTipo, int area, String direccion, tipo tipoLocal, String centroComercial) {

@@ -13,7 +13,7 @@ public class ConjuntoCerrado extends Urbana{
         this.valorAdministracion = valorAdministracion;
         this.tienePiscina = tienePiscina;
         this.tieneCamposDeportivos = tieneCamposDeportivos;
-        setValorArea(2500);
+        setValorArea(10000);
     }
 
 
