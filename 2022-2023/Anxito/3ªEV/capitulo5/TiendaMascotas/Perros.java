@@ -1,43 +1,36 @@
 package capitulo5.TiendaMascotas;
 
-public class Perros extends Mascota{
+public class Perros extends Mascota {
+    private String raza;
+    protected static String tamaño;
+    private double peso;
+    private boolean muerde;
 
-    protected int peso;
-    protected boolean muerde;
-    
-    protected static String sonido(){
-        return "Los perros ladran";
-    }
-
-    public Perros(String nombre, int edad, String color, int peso, boolean muerde) {
+    public Perros(String nombre, int edad, String color, String raza, String tamaño, double peso, boolean muerde) {
         super(nombre, edad, color);
+        this.raza = raza;
+        this.tamaño = tamaño;
         this.peso = peso;
         this.muerde = muerde;
     }
 
-    public int getPeso() {
-        return peso;
+    public String getRaza() {
+        return raza;
     }
 
-    public void setPeso(int peso) {
-        this.peso = peso;
+    public String getTamaño() {
+        return tamaño;
+    }
+
+    public double getPeso() {
+        return peso;
     }
 
     public boolean isMuerde() {
         return muerde;
     }
 
-    public void setMuerde(boolean muerde) {
-        this.muerde = muerde;
+    public static void sonido() {
+        System.out.println("Los perros ladran");
     }
-
-    @Override
-    public String toString() {
-        return super.toString() + "Perros [peso=" + peso + ", muerde=" + muerde + "]";
-    }
-
-    
-    
-
-    
 }

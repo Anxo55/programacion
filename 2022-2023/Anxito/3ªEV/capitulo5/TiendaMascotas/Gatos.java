@@ -1,40 +1,36 @@
 package capitulo5.TiendaMascotas;
 
-public class Gatos extends Mascota{
+public class Gatos extends Mascota {
+    private String raza;
+    private String tipoPelo;
+    private double alturaSalto;
+    private double longitudSalto;
 
-    protected float altura;
-    protected float longitudSalto;
-    protected static String sonido() {
-        return "los gatos maúllan y ronronean";
-    }
-    
-    public Gatos(String nombre, int edad, String color, float altura, float longitudSalto) {
+    public Gatos(String nombre, int edad, String color, String raza, String tipoPelo, double alturaSalto, double longitudSalto) {
         super(nombre, edad, color);
-        this.altura = altura;
+        this.raza = raza;
+        this.tipoPelo = tipoPelo;
+        this.alturaSalto = alturaSalto;
         this.longitudSalto = longitudSalto;
     }
 
-    public float getAltura() {
-        return altura;
+    public String getRaza() {
+        return raza;
     }
 
-    public void setAltura(float altura) {
-        this.altura = altura;
+    public String getTipoPelo() {
+        return tipoPelo;
     }
 
-    public float getLongitudSalto() {
+    public double getAlturaSalto() {
+        return alturaSalto;
+    }
+
+    public double getLongitudSalto() {
         return longitudSalto;
     }
 
-    public void setLongitudSalto(float longitudSalto) {
-        this.longitudSalto = longitudSalto;
+    public static void sonido() {
+        System.out.println("Los gatos maúllan y ronronean");
     }
-
-    @Override
-    public String toString() {
-        return super.toString() + "Gatos [altura=" + altura + ", longitudSalto=" + longitudSalto + "]";
-    }
-
-    
-    
 }

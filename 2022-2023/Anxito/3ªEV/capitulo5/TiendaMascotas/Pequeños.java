@@ -1,20 +1,16 @@
 package capitulo5.TiendaMascotas;
 
-public class Pequeños extends Perros{
+        public class Pequeños extends Perros {
+            private String razaPequeña;
 
-    enum razas
-        {YORKSHIRE, CANICHE, CHIHUAHUA, SCHNAUZER}
-
- //ATRIBUTO
-    private razas  raza;
-
-    ////constructor
-
-    @Override
-    public String toString() {
-        return super.toString() +  "Pequeños []";
-    }    
-
-    }
+            public Pequeños(String nombre, int edad, String color, double peso, boolean muerde, String razaPequeña) {
+                super(nombre, edad, color, razaPequeña, tamaño, peso, muerde);
+                this.razaPequeña = razaPequeña;
+            }
+        
+            public String getRazaPequeña() {
+                return razaPequeña;
+            }
+        }
     
 
