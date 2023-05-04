@@ -5,6 +5,8 @@ public class Medianos extends Perros {
         super(nombre, edad, color, raza, tamaño, peso, muerde);
     }
 
+    
+
     @Override
     public String toString() {
         return super.toString() + "Medianos []";

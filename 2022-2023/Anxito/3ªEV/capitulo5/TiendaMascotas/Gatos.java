@@ -33,4 +33,12 @@ public class Gatos extends Mascota {
     public static void sonido() {
         System.out.println("Los gatos maúllan y ronronean");
     }
+
+    @Override
+    public String toString() {
+        return "Gatos [raza=" + raza + ", tipoPelo=" + tipoPelo + ", alturaSalto=" + alturaSalto + ", longitudSalto="
+                + longitudSalto + "]";
+    }
+
+    
 }

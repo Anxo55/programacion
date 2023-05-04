@@ -33,4 +33,11 @@ public class Perros extends Mascota {
     public static void sonido() {
         System.out.println("Los perros ladran");
     }
+
+    @Override
+    public String toString() {
+        return "Perros [raza=" + raza + ", peso=" + peso + ", muerde=" + muerde + "]";
+    }
+
+    
 }
