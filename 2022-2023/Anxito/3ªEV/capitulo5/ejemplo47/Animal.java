@@ -19,6 +19,8 @@ public abstract class Animal {
     public String getCientifico() {
         return Cientifico;
     }
+    public void soyUnFelino() {
+    }
 
     
     
