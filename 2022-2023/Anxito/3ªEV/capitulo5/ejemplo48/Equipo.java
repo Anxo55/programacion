@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class Equipo {
@@ -77,6 +81,29 @@ public class Equipo {
         System.out.println("Nombre del equipo = "+nombre);
         System.out.println("Pais = "+pais);
         System.out.println("Total tiempo del equipo = " +totalTiempo);
+    }
+    
+    public void ordenaPosiciones() {
+        
+        //no me ordena la lista, no tengo Comparator
+       Collections.sort(lCiclistas, new Comparator<Ciclista>() {
+        @Override
+        public int compare(Ciclista c1, Ciclista c2) {
+            return c1.getTiempoAcumulado() - c2.getTiempoAcumulado();
+        }
+
+        }
+       );
+    //    //asignamos posiciones
+    //    for(int i=0; i<lCiclistas.size(); i++) {
+    //     //se recorre la lista
+    //     lCiclistas.get(i).setTiempoAcumulado(i);
+    //    }
+        ListIterator<Ciclista> iter = lCiclistas.listIterator();
+        while(iter.hasNext()) {
+           
+            iter.next().setPosicionGeneral(iter.nextIndex());
+        }
     }
 
 }

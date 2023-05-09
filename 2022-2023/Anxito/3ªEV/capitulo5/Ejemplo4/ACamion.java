@@ -1,4 +1,4 @@
-package capitulo5.ejemplo4;
+package capitulo5.Ejemplo4;
 
 import java.awt.Color;
 
