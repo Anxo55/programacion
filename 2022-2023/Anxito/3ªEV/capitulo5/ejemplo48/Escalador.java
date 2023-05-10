@@ -1,36 +1,36 @@
 public class Escalador extends Ciclista {
-    private int aceleracionPromedio;
-    private int gradoRampaSoportado;
+    protected double aceleracionPromedio;
+    protected double gradoRampa;
 
-    public Escalador(int identificador, String nombre, int aceleracionPromedio, int gradoRampaSoportado) {
+    public Escalador(int identificador, String nombre, double aceleracionPromedio, double gradoRampa) {
         super(identificador, nombre);
         this.aceleracionPromedio = aceleracionPromedio;
-        this.gradoRampaSoportado = gradoRampaSoportado;
+        this.gradoRampa = gradoRampa;
     }
 
-    public int getAceleracionPromedio() {
+    public double getAceleracionPromedio() {
         return aceleracionPromedio;
     }
 
-    public void setAceleracionPromedio(int aceleracionPromedio) {
+    public void setAceleracionPromedio(double aceleracionPromedio) {
         this.aceleracionPromedio = aceleracionPromedio;
     }
 
-    public int getGradoRampaSoportado() {
-        return gradoRampaSoportado;
+    public double getGradoRampa() {
+        return gradoRampa;
     }
 
-    public void setGradoRampaSoportado(int gradoRampaSoportado) {
-        this.gradoRampaSoportado = gradoRampaSoportado;
+    public void setGradoRampa(double gradoRampa) {
+        this.gradoRampa = gradoRampa;
     }
 
-    public void imprimirTipo() {
-        System.out.println("Tipo: Escalador");
+    @Override
+    public String toString() {
+        return super.toString() + "Escalador [aceleracionPromedio=" + aceleracionPromedio + ", gradoRampa=" + gradoRampa
+                + "]";
     }
 
-    public void imprimirDatosContrarrelojista() {
-        System.out.println("No aplica para un velocista");
+    protected String imprimirTipo() {
+        return "Es un escalador";
     }
-
-
 }

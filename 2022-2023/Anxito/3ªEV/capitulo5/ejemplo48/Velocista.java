@@ -1,34 +1,39 @@
-public class Velocista extends Ciclista {
-    private int potencia;
-    private int velocidadPromedio;
 
-    public Velocista(int identificador, String nombre, int potencia, int velocidadPromedio) {
+public class Velocista extends Ciclista {
+
+    protected double potenciaPromedio;
+    protected double velocidadPromedio;
+
+    public Velocista(int identificador, String nombre, double potenciaPromedio, double velocidadPromedio) {
         super(identificador, nombre);
-        this.potencia = potencia;
+        this.potenciaPromedio = potenciaPromedio;
         this.velocidadPromedio = velocidadPromedio;
     }
 
-    public int getPotencia() {
-        return potencia;
+    public double getPotenciaPromedio() {
+        return potenciaPromedio;
     }
 
-    public void setPotencia(int potencia) {
-        this.potencia = potencia;
+    public void setPotenciaPromedio(double potenciaPromedio) {
+        this.potenciaPromedio = potenciaPromedio;
     }
 
-    public int getVelocidadPromedio() {
+    public double getVelocidadPromedio() {
         return velocidadPromedio;
     }
 
-    public void setVelocidadPromedio(int velocidadPromedio) {
+    public void setVelocidadPromedio(double velocidadPromedio) {
         this.velocidadPromedio = velocidadPromedio;
     }
 
-    public void imprimirTipo() {
-        System.out.println("Tipo: Velocista");
+    @Override
+    public String toString() {
+        return super.toString() + "Velocista [potenciaPromedio=" + potenciaPromedio + ", velocidadPromedio="
+                + velocidadPromedio + "]";
     }
 
-    public void imprimirDatosContrarrelojista() {
-        System.out.println("No aplica para un velocista");
+    protected String imprimirTipo() {
+        return "Es un velocista";
     }
+
 }

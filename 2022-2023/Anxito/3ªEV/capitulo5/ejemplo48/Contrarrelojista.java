@@ -1,8 +1,7 @@
-public class Contrarrelojista extends Ciclista{
+public class Contrarrelojista extends Ciclista {
+    protected double velocidadMaxima;
 
-    private double velocidadMaxima;
-
-    public Contrarrelojista(int identificador, String nombre, double velocidadMaxima, int i, int j) {
+    public Contrarrelojista(int identificador, String nombre, double velocidadMaxima) {
         super(identificador, nombre);
         this.velocidadMaxima = velocidadMaxima;
     }
@@ -15,14 +14,13 @@ public class Contrarrelojista extends Ciclista{
         this.velocidadMaxima = velocidadMaxima;
     }
 
-    public void imprimirTipo() {
-        System.out.println("Tipo: Contrarrelojista");
+    @Override
+    public String toString() {
+        return super.toString() + "Contrarrelojista [velocidadMaxima=" + velocidadMaxima + "]";
     }
 
-    public void imprimirDatosContrarrelojista() {
-        System.out.println("No aplica para un velocista");
+    protected String imprimirTipo() {
+        return "Es un contrarrelojista";
     }
 
-
-    
 }

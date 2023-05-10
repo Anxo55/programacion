@@ -1,12 +1,13 @@
+
 public abstract class Ciclista {
     private int identificador;
     private String nombre;
-    private int tiempoAcumulado;
+    private int tiempoAcumulado = 0;
+    private int posicionGeneral = 0;
 
     public Ciclista(int identificador, String nombre) {
         this.identificador = identificador;
         this.nombre = nombre;
-        this.tiempoAcumulado = 0;
     }
 
     public int getIdentificador() {
@@ -33,11 +34,22 @@ public abstract class Ciclista {
         this.tiempoAcumulado = tiempoAcumulado;
     }
 
-    public abstract void imprimirTipo();
+    protected int getPosicionGeneral() {
+        return posicionGeneral;
+    }
 
-    protected void imprimir() {
-        System.out.println("Identificador: " + identificador);
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Tiempo acumulado: " + tiempoAcumulado);
+    protected void setPosicionGeneral(int posicionGeneral) {
+        posicionGeneral = posicionGeneral;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Ciclista [identificador=" + identificador + ", nombre=" + nombre
+                + ", tiempoAcumulado="
+                + tiempoAcumulado + ", posicionGeneral=" + posicionGeneral + "]";
+    }
+
+    protected String imprimirTipo() {
+        return "Es un ciclista";
     }
 }

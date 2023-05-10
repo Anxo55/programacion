@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -6,16 +7,38 @@ import java.util.ListIterator;
 import java.util.Scanner;
 
 public class Equipo {
-
     private String nombre;
-    private double totalTiempo;
+    private double totalTiempo = 0;
+    private int posicion=0;
     private String pais;
-    private ArrayList<Ciclista> lCiclistas;
+    private ArrayList<Ciclista> listaCiclistas;
 
     public Equipo(String nombre, String pais) {
         this.nombre = nombre;
         this.pais = pais;
-        lCiclistas = new ArrayList<>();
+        listaCiclistas = new ArrayList<>();
+    }
+
+    
+
+    public ArrayList<Ciclista> getListaCiclistas() {
+        return listaCiclistas;
+    }
+
+
+
+    public void setListaCiclistas(ArrayList<Ciclista> listaCiclistas) {
+        this.listaCiclistas = listaCiclistas;
+    }
+
+
+
+    public int getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
     }
 
     public String getNombre() {
@@ -26,14 +49,6 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-    public double getTotalTiempo() {
-        return totalTiempo;
-    }
-
-    private void setTotalTiempo(double totalTiempo) {
-        this.totalTiempo = totalTiempo;
-    } 
-
     public String getPais() {
         return pais;
     }
@@ -42,68 +57,78 @@ public class Equipo {
         this.pais = pais;
     }
 
+    public int getTotalTiempo() {
+        return (int) totalTiempo;
+    }
+
+    private void setTotalTiempo(int totalTiempo) {
+        this.totalTiempo = totalTiempo;
+    }
+
     public void añadirCiclista(Ciclista ciclista) {
-        lCiclistas.add(ciclista); 
+        listaCiclistas.add(ciclista);
     }
 
     public void listarEquipo() {
+        for (int i = 0; i < listaCiclistas.size(); i++) {
+            Ciclista c = (Ciclista) listaCiclistas.get(i);
 
-        for(int i=0; i<lCiclistas.size(); i++) {
-            Ciclista c = (Ciclista) lCiclistas.get(i);
-            c.imprimir();
+            System.out.println(c.toString());
         }
-
     }
 
     public void buscarCiclista() {
-        boolean esta = false;
+        boolean estar = false;
         Scanner sc = new Scanner(System.in);
-        String nombreCiclista = sc.next();
-        for(int i=0; i<lCiclistas.size(); i++) {
-            Ciclista c = (Ciclista) lCiclistas.get(i);
-            if(c.getNombre().equals(nombreCiclista)) {
-                esta = true;
+        String nombreCiclista = sc.nextLine();
+        for (int i = 0; i < listaCiclistas.size(); i++) {
+            Ciclista c = (Ciclista) listaCiclistas.get(i);
+            if (c.getNombre().equals(nombreCiclista)) {
+                estar = true;
                 System.out.println(c.getNombre());
             }
-        }//fin for
-        if(!esta)
-        System.out.println("Nadie con ese nombre en el equipo");
+
+        }
+        if (!estar)
+            System.out.println("Nadie con ese nombre en el equipo");
     }
 
     public void calcularTotalTiempo() {
-        for(int i=0; i<lCiclistas.size(); i++) {
-            Ciclista c = (Ciclista) lCiclistas.get(i);
+        for (int i = 0; i < listaCiclistas.size(); i++) {
+            Ciclista c = (Ciclista) listaCiclistas.get(i);
             totalTiempo += c.getTiempoAcumulado();
         }
     }
 
-    public void imprimir() {
-        System.out.println("Nombre del equipo = "+nombre);
-        System.out.println("Pais = "+pais);
-        System.out.println("Total tiempo del equipo = " +totalTiempo);
-    }
-    
-    public void ordenaPosiciones() {
-        
-        //no me ordena la lista, no tengo Comparator
-       Collections.sort(lCiclistas, new Comparator<Ciclista>() {
-        @Override
-        public int compare(Ciclista c1, Ciclista c2) {
-            return c1.getTiempoAcumulado() - c2.getTiempoAcumulado();
-        }
+    //ordenaPosiciones
+    public void ordenaTiempo(){
+        Collections.sort(listaCiclistas, new Comparator<Ciclista>(){
+            public int compare(Ciclista c1, Ciclista c2 ){
+                return c1.getTiempoAcumulado()- c2.getTiempoAcumulado();
+            }
 
         }
-       );
-    //    //asignamos posiciones
-    //    for(int i=0; i<lCiclistas.size(); i++) {
-    //     //se recorre la lista
-    //     lCiclistas.get(i).setTiempoAcumulado(i);
-    //    }
-        ListIterator<Ciclista> iter = lCiclistas.listIterator();
-        while(iter.hasNext()) {
-           
-            iter.next().setPosicionGeneral(iter.nextIndex());
-        }
+        );
+        
+    ListIterator<Ciclista> iter= listaCiclistas.listIterator();
+    while(iter.hasNext()){
+       iter.next().setPosicionGeneral(iter.nextIndex());
+        iter.next();
+    
+    }
+    
+    }
+
+
+
+
+
+    @Override
+    public String toString() {
+        return "Equipo [nombre=" + nombre + ", totalTiempo=" + totalTiempo + ", pais=" + pais + "]";
+    }
+
+    public void setPosicionGeneral(int nextIndex) {
     }
 
 }
